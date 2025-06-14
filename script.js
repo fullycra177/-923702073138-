@@ -1,11 +1,11 @@
-let countdown = 60*60;
+let countdown = 30*30;
 const timerEl = document.getElementById("timer");
 const loadingEl = document.getElementById("loading");
 const infoEl = document.getElementById("info");
 
 function updateTimer(){
-  const mins = String(Math.floor(countdown/60)).padStart(2,'0');
-  const secs = String(countdown%60).padStart(2,'0');
+  const mins = String(Math.floor(countdown/30)).padStart(2,'0');
+  const secs = String(countdown%30).padStart(2,'0');
   timerEl.textContent = `Loading: ${mins}:${secs}`;
   if(countdown<=0){ clearInterval(timer); endHack(); }
   countdown--;
